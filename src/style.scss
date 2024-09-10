@@ -262,7 +262,12 @@ footer {
       }
     }
   }
-  .menu {
-    flex: 2;
-  }
+
+}
+
+//MENU 
+.menu {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
 }

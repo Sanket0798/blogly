@@ -1,11 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleHomePage = () => {
+    navigate("/");
+  };
+
   return (
     <div className="navbar">
       <div className="container">
-        <div className="logo">
+        <div className="logo" onClick={handleHomePage}>
           <img src={require("../img/logo.png")} alt="" />
         </div>
         <div className="links">
@@ -30,7 +37,9 @@ const Navbar = () => {
           <span>Sanket</span>
           <span>Logout</span>
           <span className="write">
-            <Link className="link" to="/write">Write</Link>
+            <Link className="link" to="/write">
+              Write
+            </Link>
           </span>
         </div>
       </div>

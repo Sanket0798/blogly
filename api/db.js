@@ -5,4 +5,5 @@ export const db = mysql.createConnection({
   user: "root",
   password: "Sanket@123",
   database: "blog",
+  insecureAuth: true,
 });

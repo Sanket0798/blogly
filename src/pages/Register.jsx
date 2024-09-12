@@ -13,13 +13,26 @@ const Register = () => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const res = await axios.post("/auth/register", inputs);
+  //     console.log(res);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/auth/register", inputs);
-      console.log(res);
+      const res = await axios.post("/auth/register", inputs); // Ensure the correct endpoint
+      console.log("Registration successful", res.data);
     } catch (err) {
-      console.log(err);
+      console.error(
+        "Error during registration:",
+        err.response ? err.response.data : err.message
+      );
     }
   };
 

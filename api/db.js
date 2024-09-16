@@ -1,9 +1,15 @@
 import mysql from "mysql";
 
 export const db = mysql.createConnection({
+  // host: "localhost",
+  // user: "root",
+  // password: "Sanket@123",
+  // database: "blog",
+  // insecureAuth: true,
+
   host: "localhost",
   user: "root",
-  password: "Sanket@123",
+  password: "password",
   database: "blog",
-  insecureAuth: true,
+  // port: 3306,
 });
